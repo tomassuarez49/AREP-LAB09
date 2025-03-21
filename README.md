@@ -32,6 +32,33 @@ os.environ["OPENAI_API_KEY"] = "tu_openai_api_key"
 os.environ["PINECONE_API_KEY"] = "tu_pinecone_api_key"
 os.environ["PINECONE_ENV"] = "us-east-1"
 ```
+
+---
+
+## 🔎 Uso en Google Colab
+
+### 1️⃣ **Abrir en Colab**
+Sigue estos pasos para ejecutar el proyecto en **Google Colab**:
+1. Ve a [Google Colab](https://colab.research.google.com/).
+2. Haz clic en **Archivo > Abrir cuaderno**.
+3. Selecciona la pestaña **GitHub** y pega el enlace del repositorio.
+4. Abre el archivo `Build_a_Retrieval_Augmented_Generation_(RAG)_App_Part_2.ipynb`.
+
+### 2️⃣ **Ejecutar las celdas**
+Ejecuta cada celda secuencialmente usando `Shift + Enter` o haciendo clic en el botón **▶**.
+
+### 3️⃣ **Configurar las claves API**
+Cuando te lo solicite, ingresa las claves de OpenAI y Pinecone en las casillas de entrada.
+
+### 4️⃣ **Ejecutar consultas**
+Después de indexar los documentos en Pinecone, prueba la recuperación de información con:
+```python
+response = graph.invoke({"question": "What is Task Decomposition?"})
+print(response["answer"])
+```
+
+---
+
 ## 📌 Arquitectura
 
 1. **Carga de datos**: Se usa `WebBaseLoader` para extraer contenido de una URL.
@@ -48,7 +75,6 @@ os.environ["PINECONE_ENV"] = "us-east-1"
 ![image](https://github.com/user-attachments/assets/364832d1-be4e-421d-ad2e-b4d76d70b6c8)
 
 ![image](https://github.com/user-attachments/assets/edaa1d7c-6120-4e04-b8cf-d169adf691e2)
-
 
 👨‍💻 **Desarrollado por Tomas Suarez Piratova** 🚀
 
